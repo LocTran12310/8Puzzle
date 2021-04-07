@@ -1,0 +1,35 @@
+.tile {
+    margin: 1px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.tile--empty {
+    border: 1px solid #dddddd;
+    background-color: #dddddd;
+}
+
+.tile-input {
+    width: 10px;
+    height: 10px;
+    border-style: none;
+    align-self: center;
+    align-items: center;
+    font-weight: bold;
+
+    justify-content: center;
+    font-size: 15px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

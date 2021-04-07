@@ -1,0 +1,25 @@
+.main {
+    width: 100%;
+}
+
+.main-init {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-actions {
+    display: flex;
+    margin-right: 100px;
+    margin-left: 100px;
+    align-self: center;
+    flex-direction: column;
+}
+.action {
+    padding: 5px;
+    margin: 5px;
+}
+.main-solve {
+    flex-wrap: wrap;
+    display: flex;
+}
