@@ -17,6 +17,9 @@ class Main extends Component {
             fullPath: [],
             initStart: [],
             initGoal: [],
+
+            backgroundGoal: '#dddddd',
+            backgroundStart: '#dddddd',
         }
     }
 
@@ -41,7 +44,8 @@ class Main extends Component {
                     break;
                 }
                 this.setState({
-                    start: this.state.initStart
+                    start: this.state.initStart,
+                    backgroundStart: "#72c0fc"
                 })
                 alert("Nhập start thành công")
                 break;
@@ -51,7 +55,8 @@ class Main extends Component {
                     break;
                 }
                 this.setState({
-                    goal: this.state.initGoal
+                    goal: this.state.initGoal,
+                    backgroundGoal: "#72c0fc"
                 })
                 alert("Nhập goal thành công")
 
@@ -249,14 +254,21 @@ class Main extends Component {
     }
 
     render () {
-        const draw = this.state.fullPath.map(item => <Board key={item} numbers={item} isDisabled={true}/>)
+        const draw = this.state.fullPath.map((item,index) => (
+            <div className="item-board">
+                <Board key={item} numbers={item} isDisabled={true} background={"#dddddd"}/>
+                <p> ==› </p>
+            </div>
+        ))
 
         return (
             <div className="main">
                 <div className="main-init">
                     <Board
                         numbers={this.state.start}
-                        initState={this.state.initStart}/>
+                        initState={this.state.initStart}
+                        background={this.state.backgroundStart}
+                    />
                     <div className="main-actions">
                         <button className="action" onClick={()=>{this.handleAction("Start")}}>Nhập Start</button>
                         <button className="action" onClick={()=>{this.handleAction("Goal")}}>Nhập Goal</button>
@@ -264,7 +276,9 @@ class Main extends Component {
                     </div>
                     <Board
                         numbers={this.state.goal}
-                        initState={this.state.initGoal} />
+                        initState={this.state.initGoal}
+                        background={this.state.backgroundGoal}
+                    />
                 </div>
                 <div className="main-solve">
                     {draw}

@@ -27,7 +27,7 @@ class Board extends Component {
         )
 
         return (
-            <div className="board">
+            <div className="board" style={{background: this.props.background}}>
                 {tiles}
             </div>
         )

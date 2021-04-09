@@ -3,9 +3,11 @@
 React web app which solves **8 Puzzle** problem using A* algorithm
 
 ## Visualization
-![alt text](./src/img/main.png)
+### Main Screen
+![alt text](./src/img/screen1.png)
 
-![alt text](./src/img/main2.png)
+### Solved
+![alt text](./src/img/screen4.png)
 
 ## Installation
 ```bash
